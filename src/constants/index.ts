@@ -22,8 +22,7 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
+  
   meta,
   starbucks,
   tesla,
