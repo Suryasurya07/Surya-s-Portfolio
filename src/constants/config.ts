@@ -33,19 +33,19 @@ type TConfig = {
   sections: {
     about: Required<TSection>;
     experience: TSection;
-    feedbacks: TSection;
+    
     works: Required<TSection>;
   };
 };
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Surya's Portfolio",
+    fullName: "Surya",
+    email: "Suryams404@mail.com",
   },
   hero: {
-    name: "John Doe",
+    name: "SURYA",
     p: ["I develop 3D visuals, user", "interfaces and web applications"],
   },
   contact: {
@@ -77,10 +77,7 @@ export const config: TConfig = {
       p: "What I have done so far",
       h2: "Work Experience.",
     },
-    feedbacks: {
-      p: "What others say",
-      h2: "Testimonials.",
-    },
+    
     works: {
       p: "My work",
       h2: "Projects.",
