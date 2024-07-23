@@ -10,7 +10,7 @@ import type {
 import {
   mobile,
   backend,
-  creator,
+  python,
   web,
   javascript,
   typescript,
@@ -46,6 +46,11 @@ export const navLinks: TNavLink[] = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Resume",
+    url: "/SURYA M RESUME.pdf",
+  },
 ];
 
 const services: TService[] = [
@@ -54,7 +59,7 @@ const services: TService[] = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "ReactJs Developer",
     icon: mobile,
   },
   {
@@ -62,8 +67,8 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Python developer",
+    icon: python,
   },
 ];
 
@@ -118,29 +123,27 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
+    title: "Full Stack Developement-Internship",
+    companyName: "Ether Services",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Augest 2023 - January 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "During my internship at Ether Services, I led website development using HTML5, CSS3, and JavaScript, and optimized user interfaces with Python and SQL, along with the Django framework.",
+      "I implemented SEO, social media, and PPC strategies, using tools like Google Analytics and SEMrush to enhance client visibility, engagement, and conversions.",
+      " My efforts led to improved website performance, a broader online presence, and measurable business growth for clients, reinforcing Ether Services' reputation as an industry leader.",
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
+    title: "Python/React Developer",
+    companyName: "Appin Technology",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Sep 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed Python Full Stack Development course at AppinTechnology, gaining comprehensive proficiency in frontend andbackend technologies",
+      "Acquired expertise in Python programming, along with webdevelopment frameworks like REACTJS and databases.",
+      "Developed skills in creating dynamic web applications, enhancingcapabilities in full stack development.",
     ],
   },
   {
