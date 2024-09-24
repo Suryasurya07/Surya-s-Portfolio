@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -22,16 +22,6 @@ const Contact = () => {
   const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
-
-  // Initialize EmailJS only once
-  useEffect(() => {
-    if (emailjsConfig.userId) {
-      emailjs.init(emailjsConfig.userId);
-      console.log("EmailJS initialized with user ID:", emailjsConfig.userId);
-    } else {
-      console.error("EmailJS user ID is missing");
-    }
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
@@ -63,13 +53,11 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm(INITIAL_STATE);
         },
         (error) => {
           setLoading(false);
-
-          console.error("Failed to send email:", error);
+          console.log(error);
           alert("Something went wrong.");
         }
       );
@@ -105,6 +93,11 @@ const Contact = () => {
                   placeholder={placeholder}
                   className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
                   {...(input === "message" && { rows: 7 })}
+                  autoComplete={
+                    input === "email" ? "email" :
+                    input === "name" ? "name" :
+                    input === "message" ? "off" : "on"
+                  }
                 />
               </label>
             );

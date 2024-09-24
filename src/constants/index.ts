@@ -49,7 +49,7 @@ export const navLinks: TNavLink[] = [
   {
     id: "resume",
     title: "Resume",
-    url: "/SURYA M RESUME.pdf",
+    url: "/SURYA RESUME OG.pdf",
   },
 ];
 
