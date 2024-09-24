@@ -17,7 +17,7 @@
 ## 🌐 Live Demo
 
 Explore the live demonstration of the project:
-[reactjs18-3d-portfolio](https://reactjs18-3-d-portfolio.vercel.app/)
+[reactjs18-3d-portfolio](https://msurya-portfolio.netlify.app)
 
 ## 📝 Description
 
@@ -105,30 +105,6 @@ reactjs18-3d-portfolio/
 
 </details>
 
-## 📖 Table of Contents
-
-<details><summary>Table of Contents</summary>
-
-- [Live Demo](#-live-demo)
-- [Description](#-description)
-- [Technologies Used](#-technologies-used)
-- [Get Started](#-get-started)
-  - [Prerequisites](#-prerequisites)
-  - [Installation and Run Locally](#-installation-and-run-locally)
-  - [Scripts](#-scripts)
-- [Environment Variables](#-environment-variables)
-- [Deployment](#-deployment)
-  - [Deploy to production (manual)](#-deploy-to-production-manual)
-  - [Deploy on Vercel (recommended)](#-deploy-on-vercel-recommended)
-  - [Deploy on Netlify](#-deploy-on-netlify)
-- [Contributing](#-contributing)
-  - [Bug / Feature Request](#-bug--feature-request)
-- [Acknowledgements](#-acknowledgements)
-- [References](#-references)
-- [Contact Us](#-contact-us)
-- [License](#-license)
-
-</details>
 
 ## ✨ Technologies Used
 
@@ -185,7 +161,7 @@ variables in `.env` file.
 Download or clone this repo by using the link below:
 
 ```bash
-git clone https://github.com/ladunjexa/reactjs18-3d-portfolio.git
+git clone https://github.com/Suryasurya07/reactjs18-3d-portfolio.git
 ```
 
 **Step 2:**
@@ -297,12 +273,3 @@ possible:
 - [Vercel](https://vercel.com/)
 - [JavaScript Mastery](https://www.jsmastery.pro/)
 
-## 📞 Contact Us
-
-
-
-## 📋 License
-
-**Three.js 3D Portfolio** is open source software
-[licensed as MIT](https://opensource.org/license/mit/) and is free to use — See
-[LICENSE](https://github.com/ladunjexa/reactjs18-3d-portfolio/blob/main/LICENSE) for more details.
