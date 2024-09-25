@@ -23,14 +23,13 @@ import {
   mongodb,
   git,
   
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  
   carrent,
   jobit,
   tripguide,
   threejs,
+  e,
+  A,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -125,7 +124,7 @@ const experiences: TExperience[] = [
   {
     title: "Full Stack Developement-Internship",
     companyName: "Ether Services",
-    icon: starbucks,
+    icon: e,
     iconBg: "#383E56",
     date: "Augest 2023 - January 2024",
     points: [
@@ -137,7 +136,7 @@ const experiences: TExperience[] = [
   {
     title: "Python/React Developer",
     companyName: "Appin Technology",
-    icon: tesla,
+    icon: A,
     iconBg: "#E6DEDD",
     date: "Sep 2023",
     points: [
@@ -146,32 +145,7 @@ const experiences: TExperience[] = [
       "Developed skills in creating dynamic web applications, enhancingcapabilities in full stack development.",
     ],
   },
-  {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  
 ];
 
 
