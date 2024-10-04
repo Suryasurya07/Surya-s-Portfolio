@@ -8,6 +8,7 @@ import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 
+// Use 'form' to represent the state of the form fields
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
 );
@@ -20,15 +21,16 @@ const emailjsConfig = {
 
 const Contact = () => {
   const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
-  const [form, setForm] = useState(INITIAL_STATE);
+  const [form, setForm] = useState(INITIAL_STATE); // Use 'form' to manage form data
   const [loading, setLoading] = useState(false);
 
+  // Handle form field changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
   ) => {
     if (e === undefined) return;
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm({ ...form, [name]: value }); // Update form state
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
@@ -36,16 +38,17 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Use 'from' in the email content for specifying sender details
     emailjs
       .send(
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         {
-          form_name: form.name,
+          from_name: form.name, // Use form.name here to indicate sender's name
           to_name: config.html.fullName,
-          from_email: form.email,
+          from_email: form.email, // Use form.email for sender's email
           to_email: config.html.email,
-          message: form.message,
+          message: form.message, // Use form.message for the message content
         },
         emailjsConfig.userId
       )
@@ -53,7 +56,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-          setForm(INITIAL_STATE);
+          setForm(INITIAL_STATE); // Reset the form state
         },
         (error) => {
           setLoading(false);
@@ -72,7 +75,6 @@ const Contact = () => {
         <Header useMotion={false} {...config.contact} />
 
         <form
-          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
@@ -88,7 +90,7 @@ const Contact = () => {
                 <Component
                   type={input === "email" ? "email" : "text"}
                   name={input}
-                  value={form[`${input}`]}
+                  value={form[input]} // Correct form usage here
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"

@@ -87,5 +87,6 @@ export const config: TConfig = {
     ability to solve complex problems, work with different technologies,
     and manage projects effectively.`,
     },
+    
   },
 };
