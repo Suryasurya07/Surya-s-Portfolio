@@ -20,25 +20,24 @@ const emailjsConfig = {
 };
 
 const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
+  // Correctly typing formRef as a RefObject
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState(INITIAL_STATE); // Use 'form' to manage form data
   const [loading, setLoading] = useState(false);
 
   // Handle form field changes
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    if (e === undefined) return;
     const { name, value } = e.target;
     setForm({ ...form, [name]: value }); // Update form state
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
-    if (e === undefined) return;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    // Use 'from' in the email content for specifying sender details
+    // Use 'form' in the email content for specifying sender details
     emailjs
       .send(
         emailjsConfig.serviceId,
@@ -75,7 +74,7 @@ const Contact = () => {
         <Header useMotion={false} {...config.contact} />
 
         <form
-          ref={formRef}
+          ref={formRef} // Correctly using the formRef
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
