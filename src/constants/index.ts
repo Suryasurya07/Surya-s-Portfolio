@@ -13,7 +13,7 @@ import {
   python,
   web,
   javascript,
-  typescript,
+  
   html,
   css,
   reactjs,
@@ -48,7 +48,7 @@ export const navLinks: TNavLink[] = [
   {
     id: "resume",
     title: "Resume",
-    url: "/Surya Resume..pdf",
+    url: "/Surya M resume..pdf",
   },
 ];
 
@@ -62,7 +62,7 @@ const services: TService[] = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "MERN stack Developer",
     icon: backend,
   },
   {
@@ -84,10 +84,7 @@ const technologies: TTechnology[] = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+  
   {
     name: "React JS",
     icon: reactjs,
@@ -170,7 +167,7 @@ const projects: TProject[] = [
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/Suryasurya07",
   },
   {
     name: "Job IT",
@@ -191,7 +188,7 @@ const projects: TProject[] = [
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/Suryasurya07",
   },
   {
     name: "Trip Guide",
@@ -212,7 +209,7 @@ const projects: TProject[] = [
       },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/Suryasurya07",
   },
 ];
 
